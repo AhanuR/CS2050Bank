@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-public class Stack<T> {
-    private ArrayList<T> stack;
+public class Stack < T > {
+    private ArrayList < T > stack;
     public Stack() {
-        stack = new ArrayList<>();
+        stack = new ArrayList < > ();
     }
     public void push(T t) {
         stack.add(t);
@@ -23,7 +23,7 @@ public class Stack<T> {
         return stack.size();
     }
 
-    public ArrayList<T> getStack() {
+    public ArrayList < T > getStack() {
         return stack;
     }
 }
