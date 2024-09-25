@@ -1,9 +1,14 @@
-public class Saving extends Account {
+import java.io.Serializable;
+
+public class Savings extends Account implements Serializable {
+    private static final long serialVersionUID = 1L;
     public double interestRate;
-    public Saving(String accountOwnerName, double balance, int accountNumber, double interestRate){
+    public Savings(String accountOwnerName, double balance, int accountNumber, double interestRate){
         super(accountOwnerName, balance, accountNumber);
         this.interestRate = interestRate;
     }
+
+
     public double getInterestRate(){
         return interestRate;
     }
@@ -16,6 +21,6 @@ public class Saving extends Account {
         }else{ System.out.println("You can't have negative interest");}
     }
     public String info(){
-        return("accountNumber " + accountNumber + " is owned by " + accountOwnerName + ", has an interest of " + interestRate + ",and has a balance of " + balance);
+        return("accountNumber " + accountNumber + " is owned by " + accountOwnerName + ", has an interest of " + interestRate + ", and has a balance of " + balance);
     }
 }

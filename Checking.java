@@ -1,9 +1,12 @@
-public class Checking extends Account {
+import java.io.Serializable;
+
+public class Checking extends Account implements Serializable {
     public double overdraftLimit;
     public Checking(String accountOwnerName, double balance, int accountNumber, double overdraftLimit) {
         super(accountOwnerName, balance, accountNumber);
         this.overdraftLimit = overdraftLimit;
     }
+
     public double getOverdraftLimit(){
         return overdraftLimit;
     }
@@ -18,6 +21,6 @@ public class Checking extends Account {
         }else{ System.out.println("You can't withdraw negative amount");}
     }
     public String info(){
-        return("accountNumber " + accountNumber + " is owned by " + accountOwnerName + ", has an overdraft limit of " + overdraftLimit + ",and has a balance of " + balance);
+        return("accountNumber " + accountNumber + " is owned by " + accountOwnerName + ", has an overdraft limit of " + overdraftLimit + ", and has a balance of " + balance);
     }
 }

@@ -2,6 +2,11 @@
         public String accountOwnerName;
         public double balance;
         public int accountNumber;
+        public Account(){
+            accountOwnerName = "Insert name";
+            balance = 0;
+            accountNumber = (int) (Math.random() * 1_000_000_000);
+        }
         public Account(String accountOwnerName, double balance, int accountNumber) {
             this.accountOwnerName = accountOwnerName;
             this.balance = balance;
