@@ -13,14 +13,14 @@ public class Program5 {
             savingsStack.push(savingsAccount);
         }
 
-        writeStackToFile(checkingStack, "checkings.dat");
-        writeStackToFile(savingsStack, "savings.dat");
+        writeStackToFile(checkingStack, "checkings.out");
+        writeStackToFile(savingsStack, "savings.out");
 
         System.out.println("Reading Checking Accounts:");
-        readStackFromFile("checkings.dat");
+        readStackFromFile("checkings.out");
 
         System.out.println("Reading Savings Accounts:");
-        readStackFromFile("savings.dat");
+        readStackFromFile("savings.out");
     }
 
     public static void writeStackToFile(Stack < Account > stack, String filename) throws IOException {
